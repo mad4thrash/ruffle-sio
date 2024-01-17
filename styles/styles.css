@@ -1,0 +1,197 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+}
+header {
+    display: flex;
+    background-color: #e9a5b5;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 2px 10px hsl(0, 0%, 75%)
+}
+header h1 {
+    justify-content: flex-start;
+    margin-left:10vw;
+    font-size: 4rem;
+}
+header > nav {
+    justify-content: flex-end;
+    margin-right:10vw;
+}
+button{
+    background-color: #b56997;
+    border: none;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding:0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color:#f1f1f1;
+}
+button:hover {
+    background-color: white;
+    color:#b56997;
+}
+button:active {
+    transform: scale(0.95);
+}
+.toggle{
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform: rotate(-90deg);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+.toggle:hover{
+    color:#f1f1f1;
+    background-color: black;
+}
+
+.trans{
+    transform: translateY(calc(-100% + 1.5rem));
+}
+.toggle-rotation{
+    transform: rotate(90deg);
+}
+#welcome{
+    font-size: 1.25rem;
+    display:grid;
+    place-items: center;
+    height: calc(90vh - 10rem);
+    text-align: center;
+    line-height: 2.5;
+}
+#conf{
+    margin:5vh auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#insert{
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+}
+#insert-results{
+    margin:0 auto;
+}
+.list-group{
+    list-style-type: none;
+}
+
+.ruffle-swicth[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.ruffle-label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 50px;
+	position: relative;
+}
+
+.ruffle-label:after {
+	content: '';
+	position: absolute;
+	top: 1.25px;
+	left: 1.25px;
+	width: 22.5px;
+	height: 22.5px;
+	background: #fff;
+	border-radius: 22.5px;
+	transition: 0.3s;
+}
+
+.ruffle-swicth:checked + .ruffle-label {
+	background: #b56997;
+}
+
+.ruffle-swicth:checked + .ruffle-label:after {
+	left: calc(100% - 1.25px);
+	transform: translateX(-100%);
+}
+
+.ruffle-label:active:after {
+	width: 32.5px;
+}
+.ruffle-toggle-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:10px;
+}
+.ruffle-span{
+    margin-right: 1rem;
+}
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.title-container label{
+    margin-right: 1rem;
+}
+.title-container input{
+    padding:0.5rem;
+}
+.container-ruffle{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ruffle-title-main{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#number-of-winners{
+    margin-right:1rem;
+    padding:0.5rem;
+}
+
+#number-winners-div{
+    text-align:center;
+}
+
+#start-button:disabled{
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+}
+#winners{
+    text-align: center;
+}
